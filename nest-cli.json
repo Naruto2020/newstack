@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/crud/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/crud/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/crud",
+  "projects": {
+    "crud": {
+      "type": "application",
+      "root": "apps/crud",
+      "entryFile": "main",
+      "sourceRoot": "apps/crud/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/crud/tsconfig.app.json"
+      }
+    }
+  }
+}
